@@ -10,3 +10,13 @@
 - Using Outlet
 - Cretae Footer
 - create Login
+- Install axios
+- CORS - install cors in backend => add middleware in app.use() with config for whitelisting frontend server
+- Whenever you're making api call pass => {withCredential : true} to axios. for getting token
+- installed redux toolkit
+- installed react-redux
+- setup store => configureStore => Provider => userSlice(reducers, actions) => add reducer to store
+- add redux devtools in chrome
+- Login and see if data is coming properly in the store
+- should update as soon as user logs in
+- Refractor code
