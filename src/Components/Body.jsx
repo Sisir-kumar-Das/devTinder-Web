@@ -5,12 +5,15 @@ import Footer from "./Foooter";
 
 const Body = () => {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <NavBar></NavBar>
-      Body
       {/* Outlet - Any children of the body will render over here. Outlet comes
       from react-routr-dom */}
-      <Outlet></Outlet>
+
+      <main className="grow">
+        <Outlet />
+      </main>
+
       <Footer></Footer>
     </div>
   );
