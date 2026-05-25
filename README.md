@@ -22,3 +22,5 @@
 - Refractor code
 - You should not acess other routes without login
 - if token is not present, redirect to login page.
+- logout
+- profile
