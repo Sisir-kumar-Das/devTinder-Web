@@ -20,3 +20,5 @@
 - Login and see if data is coming properly in the store
 - should update as soon as user logs in
 - Refractor code
+- You should not acess other routes without login
+- if token is not present, redirect to login page.
