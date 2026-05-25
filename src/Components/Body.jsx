@@ -14,7 +14,7 @@ const Body = () => {
   const userData = useSelector((store) => store.user);
 
   const fetchProfile = async () => {
-    if (!userData) {
+    if (userData) {
       return;
     }
     try {
