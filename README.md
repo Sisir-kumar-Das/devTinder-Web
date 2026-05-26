@@ -22,5 +22,6 @@
 - Refractor code
 - You should not acess other routes without login
 - if token is not present, redirect to login page.
-- logout
-- profile
+- logout feature
+- get the feed and add the feed in the store (userSlice added)
+- build the userCard on feed page
