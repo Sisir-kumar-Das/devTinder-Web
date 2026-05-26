@@ -5,6 +5,7 @@ import Login from "./Components/Login.jsx";
 import Feed from "./Components/Feed.jsx";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore.js";
+import "./index.css";
 
 function App() {
   return (
