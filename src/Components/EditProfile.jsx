@@ -38,7 +38,8 @@ const EditProfile = ({ user }) => {
       setSucess(true);
       const removeSucess = setTimeOut(() => {
         setSucess(false);
-      }, 7000);
+      }, 3000);
+      removeSucess();
     } catch (error) {
       setError(error.response.data);
     }
