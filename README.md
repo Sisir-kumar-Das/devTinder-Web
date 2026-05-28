@@ -25,3 +25,5 @@
 - logout feature
 - get the feed and add the feed in the store (userSlice added)
 - build the userCard on feed page
+- Edit profile feature
+- updated data stored in redux
