@@ -8,7 +8,6 @@ import { getRequest } from "../utils/requestSlice";
 const Requests = () => {
   const dispatch = useDispatch();
   const requests = useSelector((store) => store.requests);
-  console.log(requests);
   const fetchRequest = async () => {
     try {
       const res = await axios.get(BASE_URL + "user/requests/received", {
@@ -31,10 +30,21 @@ const Requests = () => {
     <div className=" text-center my-10">
       <h1 className="text-bold text-4xl text-white ">Requests</h1>
       {requests?.map((request) => {
-        const { firstName, lastName, photoUrl, age, gender, about, skils } =
-          request.fromUserId;
+        const {
+          _id,
+          firstName,
+          lastName,
+          photoUrl,
+          age,
+          gender,
+          about,
+          skils,
+        } = request.fromUserId;
         return (
-          <div className="flex m-4 p-4  rounded-lg bg-base-300 w-1/2 mx-auto">
+          <div
+            key={_id}
+            className="flex justify-between items-center m-4 p-4  rounded-lg bg-base-300 w-1/2 mx-auto"
+          >
             <div>
               <img
                 alt="photo"
@@ -48,6 +58,10 @@ const Requests = () => {
               </h2>
               {age && gender && <p>{age + " " + gender}</p>}
               <p>{about}</p>
+            </div>
+            <div>
+              <button className="btn btn-primary mx-4 my-4">Reject</button>
+              <button className="btn btn-secondary mx-4 my-4">Accept</button>
             </div>
           </div>
         );

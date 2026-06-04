@@ -27,3 +27,5 @@
 - build the userCard on feed page
 - Edit profile feature
 - updated data stored in redux
+- New Page - See all my connnections
+- New Page - see all my connection Requests
