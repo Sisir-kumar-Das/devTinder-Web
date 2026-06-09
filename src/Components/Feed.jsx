@@ -25,6 +25,16 @@ const Feed = () => {
     getFeed();
   }, []);
 
+  if (!feed) return;
+
+  if (feed.length === 0)
+    return (
+      <h2 className="text-3xl flex justify-center items-center">
+        {" "}
+        No Profile Found.
+      </h2>
+    );
+
   return (
     feed && (
       <div className="flex justify-center align-middle my-4">
