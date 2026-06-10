@@ -10,7 +10,7 @@ const Connections = () => {
   const connections = useSelector((store) => store.connections);
   const fetchConnections = async () => {
     try {
-      const res = await axios.get(BASE_URL + "user/requests/received", {
+      const res = await axios.get(BASE_URL + "user/connections", {
         withCredentials: true,
       });
       dispatch(getConnections(res.data.data));
@@ -32,7 +32,7 @@ const Connections = () => {
       <h1 className="text-bold text-4xl text-white ">Connections</h1>
       {connections?.map((connection) => {
         const { firstName, lastName, photoUrl, age, gender, about, skils } =
-          connection.fromUserId;
+          connection;
         return (
           <div className="flex m-4 p-4  rounded-lg bg-base-300 w-1/2 mx-auto">
             <div>
