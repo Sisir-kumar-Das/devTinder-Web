@@ -45,7 +45,7 @@ const Login = () => {
         },
         { withCredentials: true },
       );
-      dispatch(addUser(res.data));
+      dispatch(addUser(res.data.data));
       navigate("/profile");
     } catch (e) {
       setError(true);
